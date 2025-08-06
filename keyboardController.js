@@ -44,7 +44,7 @@ let octave = 3;
 /* add an event listener to each key */
 allKeys.forEach((key) => {
   key.addEventListener("mousedown", (e) => {
-    let note = e.target.textContent;
+    let note = e.target.dataset.note;
     polySynth.triggerAttackRelease(note + octave, "8n");
   });
 });
